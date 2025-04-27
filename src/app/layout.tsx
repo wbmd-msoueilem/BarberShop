@@ -1,19 +1,15 @@
 import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
+import {Tajawal} from 'next/font/google';
 import './globals.css';
 import {Toaster} from '@/components/ui/toaster';
 import {SidebarProvider} from '@/components/ui/sidebar';
 import {Header} from '@/components/header';
 import {Footer} from '@/components/footer';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const tajawal = Tajawal({
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: '--font-tajwal',
+  weight: ['400', '500', '700'],
 });
 
 export const metadata: Metadata = {
@@ -28,11 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${tajawal.variable} antialiased`}>
         <SidebarProvider>
-          <Header />
-          {children}
-          <Footer />
+          <div className="flex flex-col min-h-screen w-full">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
           <Toaster />
         </SidebarProvider>
       </body>
