@@ -1,36 +1,36 @@
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const policyText = `
-## Appointment Policy
+const policyText = `## سياسة المواعيد
 
-We require 24 hours notice for cancellations. Late cancellations or no-shows may be subject to a fee.
+نطلب إشعارًا قبل 24 ساعة للإلغاءات. قد تخضع الإلغاءات المتأخرة أو عدم الحضور لرسوم.
 
-## Health and Safety
+## الصحة والسلامة
 
-Your health and safety are our top priorities. We adhere to strict sanitation guidelines.
+صحتكم وسلامتكم على رأس أولوياتنا. نلتزم بإرشادات صارمة للنظافة.
 `;
 
 export default function PolicyPage() {
-  return (
-    <div className="container mx-auto py-10">
-      <Card>
-        <CardHeader>
-          <CardTitle>Our Policies</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <PolicySection text={policyText} />
-        </CardContent>
-      </Card>
-    </div>
-  );
+    return (
+        <div className="container mx-auto py-10 flex flex-col items-end">
+            <h1 className="text-3xl font-semibold mb-6">سياساتنا</h1>
+            <Card className="w-full">
+                <CardHeader>
+                    <CardTitle className="text-right">سياساتنا</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <PolicySection text={policyText} />
+                </CardContent>
+            </Card>
+        </div>
+    );
 }
 
-function PolicySection({text}: {text: string}) {
-  return (
-    <div className="prose">
-      {text.split('\n\n').map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-    </div>
-  );
+function PolicySection({ text }: { text: string }) {
+    return (
+        <div className="prose flex flex-col items-end text-right">
+            {text.split('\n\n').map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+            ))}
+        </div>
+    );
 }
