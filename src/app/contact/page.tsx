@@ -3,12 +3,18 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/compo
 import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/textarea';
 import {MapEmbed} from '@/components/map-embed';
+import {Facebook, Instagram, Twitter} from 'lucide-react';
 
 const shopInfo = {
   name: 'SharpCut Barbershop',
   address: '123 Main Street, Anytown USA',
   phone: '555-123-4567',
   email: 'info@sharpcut.com',
+  socialMedia: {
+    facebook: 'https://facebook.com/sharpcut',
+    instagram: 'https://instagram.com/sharpcut',
+    twitter: 'https://twitter.com/sharpcut',
+  },
 };
 
 export default function ContactPage() {
@@ -52,6 +58,33 @@ export default function ContactPage() {
               <Textarea placeholder="Your Message" />
               <Button>Send Message</Button>
             </CardContent>
+          </Card>
+          <Card>
+              <CardHeader>
+                  <CardTitle>Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p>
+                      <strong>Address:</strong> {shopInfo.address}
+                  </p>
+                  <p>
+                      <strong>Phone:</strong> {shopInfo.phone}
+                  </p>
+                  <p>
+                      <strong>Email:</strong> {shopInfo.email}
+                  </p>
+                  <div className="flex space-x-4 mt-4">
+                      <a href={shopInfo.socialMedia.facebook} target="_blank" rel="noopener noreferrer">
+                          <Facebook className="h-5 w-5 text-foreground" />
+                      </a>
+                      <a href={shopInfo.socialMedia.instagram} target="_blank" rel="noopener noreferrer">
+                          <Instagram className="h-5 w-5 text-foreground" />
+                      </a>
+                      <a href={shopInfo.socialMedia.twitter} target="_blank" rel="noopener noreferrer">
+                          <Twitter className="h-5 w-5 text-foreground" />
+                      </a>
+                  </div>
+              </CardContent>
           </Card>
         </div>
       </div>
