@@ -75,7 +75,7 @@ export default function Home() {
   const { state } = useSidebar()
 
   return (
-    <div className="container flex">
+    <div className="container flex flex-col">
       <Sidebar collapsible="icon">
         <SidebarHeader>
           <SidebarTrigger />
@@ -227,3 +227,4 @@ function BarberCard({barber}: {barber: any}) {
     </Card>
   );
 }
+
