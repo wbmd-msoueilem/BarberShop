@@ -35,7 +35,7 @@ export default function AboutPage() {
         </CardHeader>
         <CardContent>
           <p>
-            SharpCut Barbershop was founded in 2010 with a simple mission: to provide the best haircuts and grooming services in town. We're passionate about
+            Lebjawi Barbershop was founded in 2010 with a simple mission: to provide the best haircuts and grooming services in town. We're passionate about
             our craft and dedicated to our customers.
           </p>
         </CardContent>

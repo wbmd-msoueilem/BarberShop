@@ -7,7 +7,9 @@ export function Header() {
   return (
     <header className="bg-secondary py-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="text-2xl font-bold">SharpCut</div>
+        <div className="text-2xl font-bold">
+          <img src="/barber-text.png/" className='w-20'/>
+        </div>
         <Navigation />
         <Button>Book Now</Button>
       </div>

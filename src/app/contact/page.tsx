@@ -6,14 +6,14 @@ import {MapEmbed} from '@/components/map-embed';
 import {Facebook, Instagram, Twitter} from 'lucide-react';
 
 const shopInfo = {
-  name: 'SharpCut Barbershop',
-  address: '123 Main Street, Anytown USA',
-  phone: '555-123-4567',
-  email: 'info@sharpcut.com',
+  name: 'Lebjawi Barbershop',
+  address: 'Carefour Lebrar, Tensoueilem, Nouakchott',
+  phone: '46 35 75 72',
+  email: 'info@lebjawi.com',
   socialMedia: {
-    facebook: 'https://facebook.com/sharpcut',
-    instagram: 'https://instagram.com/sharpcut',
-    twitter: 'https://twitter.com/sharpcut',
+    facebook: 'https://facebook.com/mls.cr7',
+    instagram: 'https://instagram.com/mls.cr7',
+    twitter: 'https://twitter.com/mls.cr7',
   },
 };
 

@@ -3,40 +3,24 @@
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {cn} from '@/lib/utils';
 import {MapEmbed} from '@/components/map-embed';
 import {Facebook, Instagram, Twitter} from 'lucide-react';
 import {getServiceRecommendation} from '@/ai/flows/service-recommendation';
 import {useState} from 'react';
 import {Input} from '@/components/ui/input';
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarSeparator,
-  SidebarTrigger,
-  useSidebar,
-} from "@/components/ui/sidebar"
-import Link from "next/link"
 
 const shopInfo = {
-  name: 'SharpCut Barbershop',
+  name: 'Lebjawi Barbershop',
   tagline: 'Where style meets precision.',
-  address: '123 Main Street, Anytown USA',
-  phone: '555-123-4567',
-  email: 'info@sharpcut.com',
+  address: 'Carefour Lebrar, Tensoueilem, Nouakchott',
+  phone: '46 35 75 72',
+  email: 'info@lebjawi.com',
   socialMedia: {
-    facebook: 'https://facebook.com/sharpcut',
-    instagram: 'https://instagram.com/sharpcut',
-    twitter: 'https://twitter.com/sharpcut',
+    facebook: 'https://facebook.com/mls.cr7',
+    instagram: 'https://instagram.com/mls.cr7',
+    twitter: 'https://twitter.com/mls.cr7',
   },
-  welcomeMessage: `Welcome to SharpCut Barbershop! We're dedicated to providing the highest quality cuts and grooming services in a relaxed and modern atmosphere.`,
+  welcomeMessage: `Welcome to Lebjawi Barbershop! We're dedicated to providing the highest quality cuts and grooming services in a relaxed and modern atmosphere.`,
 };
 
 const barbers = [
@@ -72,49 +56,8 @@ export default function Home() {
     setRecommendation(result.recommendation);
   };
 
-  const { state } = useSidebar()
-
   return (
     <div className="container flex flex-col">
-      <Sidebar collapsible="icon">
-        <SidebarHeader>
-          <SidebarTrigger />
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/">Home</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/about">About</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/gallery">Gallery</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/contact">Contact</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/policy">Policy</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="/book-now">Book Now</Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarContent>
-      </Sidebar>
       <div className="flex-1 p-4">
           <>
       <HeroSection shopName={shopInfo.name} tagline={shopInfo.tagline} />
